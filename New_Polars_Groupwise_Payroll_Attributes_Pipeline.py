@@ -18,7 +18,7 @@ start1 = time.perf_counter()
 #df_part = spark.table("s99grp.c26779e_Payroll_Txn_Partition_1").toPandas()
 #df_part = pl.from_pandas(df_part)
 
-df_part = pl.read_csv("one_consumer_sample".csv)
+df_part = pl.read_csv("one_consumer_sample.csv")
 df_part = df_part[['experian_consumer_key','account_vid','cleaned_description','D_appMonth','enriched_category','account_type_code','txn_amount','txn_timestamp']]
 end1 = time.perf_counter()
 print(f"Data Reading Time: {end1 - start1:.4f} seconds")
