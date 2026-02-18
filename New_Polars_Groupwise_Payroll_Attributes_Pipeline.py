@@ -336,7 +336,7 @@ print("Loop start")
 
 ############################################ PIPELINE START ############################################
 
-#df_part = df_part.filter(pl.col('experian_consumer_key') == 39912435985)
+#df_part = df_part.filter(pl.col('experian_consumer_key') == 39912435985) for one customer
 # Outer loop: one customer at a time
 for eck, df_eck in df_part.group_by("experian_consumer_key", maintain_order=False):
 
